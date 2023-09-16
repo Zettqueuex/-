@@ -1,7 +1,7 @@
 # BOT BUY
 > บอทซื้อยศ-โดเนท คุณภาพสูง
 
-![Image]([https://cdn.discordapp.com/attachments/1095025373986685022/1102822394252496966/image.png](https://cdn.discordapp.com/attachments/1140643173689987185/1152544720480915508/image.png))
+![Image](https://cdn.discordapp.com/attachments/1140643173689987185/1152544720480915508/image.png)
 
 ## **คุณสมบัติ**
 - ปรับแต่งได้ตามต้องการ รูปแบบ : source code
