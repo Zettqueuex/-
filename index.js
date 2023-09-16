@@ -158,47 +158,4 @@ client.on("interactionCreate", async (interaction) => {
         }
     }
 });
-client.on("interactionCreate", async (interaction) => {
-    if (!interaction.isButton()) return;
 
-    if (interaction.customId === "โดเนท") {
-        // สร้าง Modal หรือตอบกลับตามที่คุณต้องการ
-        const modal = new Discord.ModalBuilder()
-            .setCustomId('topup')
-            .setTitle('ข้อความใน Modal')
-            .setDescription('รายละเอียด Modal');
-
-        // เพิ่ม Input, Action Row, หรือ Component อื่น ๆ ใน Modal ตามต้องการ
-        const codeInput = new Discord.TextInputBuilder()
-            .setCustomId('codeInput')
-            .setLabel("ลิ้งค์ซองอังเปา")
-            .setPlaceholder('https://gift.truemoney.com/campaign/?v=xxxxxxxxxxxxxxx')
-            .setStyle(Discord.TextInputStyle.Short);
-
-        const codeInputActionRow = new Discord.ActionRowBuilder().addComponents(codeInput);
-
-        modal.addComponents(codeInputActionRow);
-
-        await interaction.showModal(modal);
-    }
-    // เพิ่มเงื่อนไขอื่น ๆ สำหรับปุ่มอื่น ๆ ตามต้องการ
-});
-if (interaction.isButton()) {
-    if (interaction.customId == "โดเนท") {
-        const newButton = new Discord.MessageButton()
-            .setCustomId('ชื่อปุ่มใหม่')
-            .setLabel('ปุ่มใหม่')
-            .setStyle('PRIMARY');
-
-        // เพิ่มปุ่มใหม่เข้าไปใน Action Row ที่มีอยู่
-        const actionRow = new Discord.MessageActionRow().addComponents(newButton);
-
-        // สร้าง Modal หรือตอบกลับแล้วเพิ่ม Action Row ที่มีปุ่มใหม่
-        // ตามตัวอย่างด้านล่าง
-        await interaction.reply({
-            content: 'ข้อความหรือเนื้อหาที่คุณต้องการให้แสดง',
-            components: [actionRow],
-        });
-    }
-    // เพิ่มเงื่อนไขอื่น ๆ สำหรับปุ่มอื่น ๆ ตามต้องการ
-}
